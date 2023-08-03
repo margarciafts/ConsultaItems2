@@ -23,8 +23,8 @@ public class ItemServices implements IItemServices {
                 .equalsIgnoreCase(name)).collect(Collectors.toList());
         //return filteredItems.isEmpty() ? itemList : filteredItems;
         if (filteredItems.size() == 0) {
-            throw new RuntimeException("items no encontrado");
-
+            //throw new RuntimeException("items no encontrado");
+            return itemList;
         }
         else{
             return filteredItems;
